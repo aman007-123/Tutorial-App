@@ -1,0 +1,51 @@
+<div class="container p-5">
+  <div class="col-md-12">
+    <h5>
+      In order to communicate between two components, angular provides special
+      feature for component communcation with the help of
+      <code>@Input</code> and <code>@Output</code> decorators. This is good only
+      when there is a communcation between parent and child component.
+    </h5>
+  </div>
+  <div class="col-md-12 pt-3">
+    <table class="table table-bordered border-light">
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><code>@Input</code></td>
+        <td>
+          {{ input }}
+        </td>
+      </tr>
+      <tr>
+        <td><code>@Output</code></td>
+        <td>
+          This decorator is used when the communcation is from child to parent
+          component. To emit an event from outside a component this decorator is
+          used, it will inform angular that the emmiting value is coming from
+          outside component, it will use <code>EventEmitter()</code> to create
+          custom event and to use this decorator it must be added below the
+          Input decorator.It is achieved by event binding.
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="container bg-info p-5">
+    <div class="row">
+      <div class="col-md-12">
+        <app-parent (notify)="parentMethod($event)"></app-parent>
+        <h5 class="text-center">{{ childData }}</h5>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="container bg-warning p-5">
+    <div class="row">
+      <div class="col-md-12">
+        <app-child [uname]="username"></app-child>
+      </div>
+    </div>
+  </div>
+</div>

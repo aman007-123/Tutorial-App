@@ -1,0 +1,97 @@
+<div class="container p-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h5>
+        Directives in angular are used to give instructions in the DOM.
+        Components are also directives, because through components we are
+        instructing angular to place the HTML and TypeScript logic in the place
+        of selector. Directives are of three types.
+      </h5>
+      <br />
+      <h5 class="text-primary">Component direcives</h5>
+      <p>
+        Components are having typescript file and html template in which
+        business logic are typed, through this logic, component is instructing
+        angular to place the logic in selector.
+      </p>
+      <div class="col-md-12 pt-3">
+        <h5 class="text-primary">Structural direcives</h5>
+        <p>
+          They are used in angular to modify the DOM.
+          <span class="text-primary">Example: </span>
+          <code>*ngIf</code>, <code>*ngFor</code>,
+          <code>*ngSwitch</code>
+        </p>
+          <table class="table table-bordered border-light">
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td><code>*ngIf</code></td>
+              <td>
+                <span *ngIf="showText; else alternate">{{ text }}</span>
+                <ng-template #alternate
+                  ><span>This is false text</span></ng-template
+                >
+              </td>
+            </tr>
+          <tr>
+            <td><code>*ngFor</code></td>
+            <td>
+              <span *ngFor="let value of values">{{ value }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td><code>*ngSwitch</code></td>
+            <td>
+              <span
+                >Using switchcase we can switch between different DOM based
+                elements</span
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-12 pt-5">
+        <h5 class="text-primary">Attribute direcives</h5>
+        <p>
+          They are used in angular to modify the property of DOM.
+          <span class="text-primary">Example: </span>
+          <code>*ngClass</code>,
+          <code>*ngStyle</code>
+        </p>
+        <table class="table table-bordered border-light">
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>*ngClass</code></td>
+            <td>
+              <span>It is used to add dynamically class in the DOM</span>
+            </td>
+          </tr>
+          <tr>
+            <td><code>*ngStyle</code></td>
+            <td>
+              <span
+                >It is used in the DOM to apply styles dynamically. It uses js
+                objects</span
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-md-12 pt-3">
+        <h5 class="text-primary">Custom directives</h5>
+        <p>
+          If there is different requirement, other than the predefined
+          directives in angular, we can create our own directive by this
+          command.<br>
+          <code>ng generate directive 'directive-name'</code>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

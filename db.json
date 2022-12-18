@@ -1,0 +1,47 @@
+{
+  "FormData": [
+    {
+      "name": "Aman nema",
+      "email": "its_aman007@rediffmail.com",
+      "password": "Amannema@123",
+      "city": "Jabalpur",
+      "state": "Madhya Pradesh",
+      "zip": "482001",
+      "id": 1
+    },
+    {
+      "name": "Tuktuk",
+      "email": "aman07nema@gmail.com",
+      "password": "Tuktuknema",
+      "city": "Vijaynagar",
+      "state": "Madhya Pradesh",
+      "zip": "482001",
+      "id": 2
+    },
+    {
+      "name": "aman nema",
+      "email": "poonamnema90@gmail.com",
+      "password": "fgd",
+      "city": "haryana",
+      "state": "Chandigrah",
+      "zip": "2345",
+      "id": 3
+    },
+    {
+      "name": "aman nema",
+      "email": "poonamnema90@gmail.com",
+      "password": "fdgdfg",
+      "city": "pune",
+      "state": "Maharashtra",
+      "zip": "12345",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ]
+}

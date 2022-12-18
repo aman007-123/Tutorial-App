@@ -1,0 +1,26 @@
+<div class="container p-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h5>
+        Forms are used to collect data from users. Angular supports 2 types of
+        forms i,e Template driven forms and Model driven forms (reactive forms).
+      </h5>
+      <h5 class="text-primary pt-3">Template Driven forms</h5>
+      <p>
+        They are the basic type of forms which are easy to create. The business
+        logic is placed inside the HTML template. They are suitable for simple
+        forms and are require less validation.
+      </p>
+      <button class="btn btn-primary" (click)="openTDF()">Open TDF</button>
+
+      <h5 class="text-danger pt-4">Model Driven forms</h5>
+      <p>
+        They are also called Reactive forms. The business logic is placed inside
+        the typescript component.They are robust, scalable, reusable and
+        testable. They are suitable for complex forms and are require strong
+        validations.
+      </p>
+      <button class="btn btn-danger" (click)="openMDF()">Open MDF</button>
+    </div>
+  </div>
+</div>

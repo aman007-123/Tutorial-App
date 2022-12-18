@@ -1,0 +1,56 @@
+<div class="container p-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h5>
+        Data binding in angular is an important feature which is used for
+        communication between typescript component and html template.
+      </h5>
+      <br />
+      <h5 class="text-primary">One way databinding</h5>
+      <table class="table table-bordered border-light">
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>String interpolation</td>
+          <td>
+            <code>{{ name }}</code> this value is string interpolation
+          </td>
+        </tr>
+        <tr>
+          <td>Property binding</td>
+          <td>
+            <img [src]="imageUrl" alt="img" height="50" width="50" /> image
+            property <code>[src]</code> is binding
+          </td>
+        </tr>
+        <tr>
+          <td>Event binding</td>
+          <td>
+            <button class="btn btn-primary text-dark" (click)="showAlert()">
+              click me
+            </button>
+            this is event binding
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-12 pt-5">
+      <h5 class="text-primary">Two way databinding</h5>
+      <p>
+        <label for="name">User name: &nbsp;</label>
+        <input type="text" [(ngModel)]="username" />
+      </p>
+      <h6>
+        Hello <span class="text-primary">{{ username }}</span>
+      </h6>
+      <p>
+        Two way binding uses <code>[(ngModel)]</code> directive which helps to
+        communicate both sides at the same time.<br />
+        To use <code>[(ngModel)]</code>, <code>FormsModule</code> must be
+        imported in <span class="text-danger">app module</span>.
+      </p>
+    </div>
+  </div>
+</div>
