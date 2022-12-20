@@ -21,6 +21,55 @@
         validations.
       </p>
       <button class="btn btn-danger" (click)="openMDF()">Open MDF</button>
+
+      <h5 class="pt-4">Angular form teminologies</h5>
+      <table class="table table-bordered border-light">
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>FormControl</code></td>
+          <td>
+            A FormControl represents a single input field in an Angular form. It
+            Tracks the value and validation status of each of these control.
+          </td>
+        </tr>
+        <tr>
+          <td><code>FormGroup</code></td>
+          <td>
+            FormGroup is a collection of FormControls . Each FormControl is a
+            property in a FormGroup, with the control name as the key. A typical
+            Angular Form can have more than one FormGroup. A FormGroup can also
+            contain another FormGroup.
+          </td>
+        </tr>
+        <tr>
+          <td><code>FormArray</code></td>
+          <td>
+            FormArray is an array of form controls. It is similar to FormGroup
+            except for one difference. In FormGroup each FormControl is a
+            property with the control name as the key. In FormArray is an array
+            of form controls.
+          </td>
+        </tr>
+        <tr>
+          <td><code>FormBuilder</code></td>
+          <td>
+            The FormBuilder is the helper API to build forms in Angular. It
+            provides shortcuts to create the instance of the FormControl,
+            FormGroup or FormArray. It reduces the code required to write the
+            complex forms.
+          </td>
+        </tr>
+        <tr>
+          <td><code>ngSubmit</code></td>
+          <td>
+            The ngSubmit() method is called when the ‘submit’ event is triggered
+            on the ngForm.
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
 </div>

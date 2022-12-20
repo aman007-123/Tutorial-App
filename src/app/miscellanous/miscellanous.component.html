@@ -1,1 +1,167 @@
-<p>miscellanous works!</p>
+<div class="container p-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h5>Miscellanous concepts in angular</h5>
+      <br />
+      <h5 class="text-primary">AngularJs VS Angular</h5>
+      <table class="table table-bordered border-light">
+        <tr>
+          <th>AngularJs</th>
+          <th>Angular</th>
+        </tr>
+        <tr>
+          <td>AngularJs is written in JavaScript</td>
+          <td>Angular is written in typescript and supports JS as well.</td>
+        </tr>
+        <tr>
+          <td>
+            Applications developed using angularjs are not mobile friendly
+          </td>
+          <td>They are fully optimized for mobile browsers</td>
+        </tr>
+        <tr>
+          <td>It is based on MVC and MVVM architecture</td>
+          <td>It is based on Components and Directives</td>
+        </tr>
+        <tr>
+          <td>Its performance is low as compare to modern angular versions</td>
+          <td>
+            It offers high performance application due to data binding feature
+          </td>
+        </tr>
+        <tr>
+          <td>It is easy to learn</td>
+          <td>It is difficult to learn</td>
+        </tr>
+        <tr>
+          <td>
+            Its projects are difficult to manage due to not having folder
+            structure
+          </td>
+          <td>
+            Angular defines proper folder structure thus, projects are easy to
+            manageble
+          </td>
+        </tr>
+        <tr>
+          <td>It doesn't have CLI</td>
+          <td>It has CLI</td>
+        </tr>
+        <tr>
+          <td>
+            It doesn't use dependancy injections instead it uses directives
+          </td>
+          <td>It uses dependancy injections to enhance performance</td>
+        </tr>
+      </table>
+      <h5 class="text-primary">Life cycle hooks</h5>
+      <p>
+        Lifecycle hooks are a special functionality in Angular that allow us to
+        “hook into” and run code at a specific lifecycle event of a component or
+        directive. Angular manages components and directives for us when it
+        creates them, updates them, or destroys them. With lifecycle hooks, we
+        can gain better control of our application. Components and directives
+        both have life cycle hook, component have more life cycle hooks than
+        directives.
+      </p>
+      <h6 class="text-primary">
+        Common lifecycle hooks in components and directives
+      </h6>
+      <table class="table table-bordered border-light">
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>ngOnInit</code></td>
+          <td>
+            It will be invoked when a component is initialized. It call only
+            once after the first <code>ngOnChanges</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>ngOnChanges</code></td>
+          <td>
+            It is called once before<code>ngOnInit</code>and will be called
+            whenever the data bound input property changes.
+          </td>
+        </tr>
+        <tr>
+          <td><code>ngOnDestroy</code></td>
+          <td>
+            It will be called once just before the component is removed from
+            DOM. In other words when the component is destroy from the dom. It
+            is generally used to avoid memory leak.
+          </td>
+        </tr>
+        <tr>
+          <td><code>ngDoCheck</code></td>
+          <td>
+            It invoked when the change detected of a given component is invoked.
+            It is called immediately after <code>ngOnChanges</code>
+          </td>
+        </tr>
+      </table>
+      <p>
+        <span class="text-primary">Note: </span>Constructor is not a life cycle
+        hook. It is a typescript feature. Constructor calls first then ngOnInit
+        calls.
+      </p>
+      <h5 class="text-primary">Angular routing</h5>
+      <p>
+        It means navigation between pages. Navigation is one the important
+        aspect in an application. SPA does not have multiple page concept it
+        does move form one view to another view, so routing is an important
+        concept in angular.
+      </p>
+      <table class="table table-bordered border-light">
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>router-outlet</code></td>
+          <td>
+            It is a routing directive and is used to inform angular that which
+            component to be load when the path is matched.
+          </td>
+        </tr>
+        <tr>
+          <td><code>routerLink</code></td>
+          <td>
+            Use this directive instead of href in <code>a</code> tag to avoid
+            reloading in HTML pages. It is recommended in angular.
+          </td>
+        </tr>
+        <tr>
+          <td><code>routerLinkActive</code></td>
+          <td>
+            It is a directive which is used to highlight active route or link.
+          </td>
+        </tr>
+      </table>
+      <h5 class="text-primary">
+        Tips to improve performance of angular application
+      </h5>
+      <ol>
+        <li>
+          Unsubscribe from Observables using ngOnDestroy which prevent memory
+          leak.
+        </li>
+        <li>
+          Make use of Lazy Loading to load only the necessary modules at the
+          initial load.
+        </li>
+        <li>Using AoT Compilation.</li>
+        <li>
+          Using OnPush Change Detection Strategy (Change detection is the
+          process by which angular updates the DOM.)
+        </li>
+        <li>Using Pure Pipes.</li>
+        <li>Use trackBy option for For Loop.</li>
+        <li>Avoid computation in template files.</li>
+        <li>Usage of Web Workers.</li>
+      </ol>
+    </div>
+  </div>
+</div>
