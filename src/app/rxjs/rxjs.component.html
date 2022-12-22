@@ -4,7 +4,43 @@
       <h5>
         RxJS (Reactive Extensions for JavaScript) is a library for reactive
         programming using observables that makes it easier to compose
-        asynchronous or callback-based code.
+        asynchronous or callback-based code. RxJS is a third-party library used
+        by the Angular team. RxJS is a reactive streams library used to work
+        with asynchronous streams of data. Observables, in RxJS, are used to
+        represent asynchronous streams of data. Observables are a more advanced
+        version of Promises in JavaScript
+      </h5>
+      <h5 class="text-primary pt-3">Why RxJS Observables?</h5>
+      <p>
+        Angular team has recommended Observables for asynchronous calls because
+        of the following reasons:
+      </p>
+      <ol>
+        <li>
+          Promises emit a single value whereas observables (streams) emit many
+          values.
+        </li>
+        <li>
+          Observables can be cancellable where Promises are not cancellable.
+        </li>
+        <li>
+          If an HTTP response is not required, observables allow us to cancel
+          the subscription whereas promises execute either success or failure
+          callback even if the results are not required.
+        </li>
+        <li>
+          Observables support functional operators such as
+          <code>map</code>, <code>filter</code>, <code>reduce</code> etc.
+        </li>
+      </ol>
+      <h5>
+        Observable has another method called subscribe which listens to the data
+        coming through the stream. Subscribe() method has three parameters. The
+        first parameter is a success callback which will be invoked upon
+        receiving successful data from the stream. The second parameter is an
+        error callback which will be invoked when Observable returns an error
+        and the third parameter is a complete callback which will be invoked
+        upon successful streaming of values from Observable
       </h5>
     </div>
   </div>

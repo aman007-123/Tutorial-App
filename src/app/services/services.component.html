@@ -6,14 +6,18 @@
         share data across the components in angular application. It is a
         typescript class used for sharing data or functionality across the
         application. Services can be inject using <code>constructors()</code>.
-        It is a best practice for code reusability.
+        It is a best practice for code reusability. Angular Services come as
+        objects which are wired together using dependency injection. Services
+        are also used to make HTTP requests.
       </h5>
       <h5 class="text-primary pt-3">Dependancy injection</h5>
       <p>
-        Dependancy injection is the ability to provide the functionality at
-        runtime. Dependency Injection is built into the Angular framework and
-        used throughout to provide new components with the services or other
-        resources they require.
+        Dependency Injection (DI) is a mechanism where the required resources
+        will be injected into the code automatically. Dependancy injection is
+        the ability to provide the functionality at runtime. Dependency
+        Injection is built into the Angular framework and used throughout to
+        provide new components with the services or other resources they
+        require.
       </p>
       <h5 class="text-primary pt-3">HttpClient</h5>
       <p>
@@ -57,9 +61,10 @@
       <div class="col-md-12 pt-3">
         <h5 class="text-primary">How to create a service</h5>
         <p>
-          Service can be create using the below command<br>
+          Service can be create using the below command<br />
           <code>ng generate service 'service-name'</code>
         </p>
+      </div>
     </div>
   </div>
 </div>
