@@ -1,12 +1,11 @@
 <div class="container p-5">
   <div class="row">
     <div class="col-md-12">
-      <h5>Template Driven form</h5>
+      <h5 class="pb-3">Template Driven form</h5>
       <form
         class="row g-2 p-4 bg-light rounded"
         #userForm="ngForm"
-        (ngSubmit)="submitForm(userForm.value)"
-        
+        (ngSubmit)="submitForm()"
       >
         <div class="col-md-6">
           <label for="name" class="form-label">Name</label>
@@ -17,7 +16,11 @@
             id="name"
             ngModel
             required
+            #name="ngModel"
           />
+          <small class="text-danger" *ngIf="name.touched && name.invalid"
+            >Please enter user name</small
+          >
         </div>
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
@@ -29,7 +32,11 @@
             ngModel
             required
             email
+            #email="ngModel"
           />
+          <small class="text-danger" *ngIf="!email.valid && email.touched"
+            >Please enter a valid mail</small
+          >
         </div>
         <div class="col-md-6">
           <label for="inputPassword4" class="form-label">Password</label>
@@ -83,27 +90,26 @@
         </div>
       </form>
 
-      <div class="col-md-12 pt-3">
-        <table class="table table-bordered border-light">
-          <tr class="bg-danger">
-            <th>ID</th>
-            <th>NAME</th>
-            <th>EMAIL</th>
-            <th>PASSWORD</th>
-            <th>CITY</th>
-            <th>STATE</th>
-            <th>ZIP</th>
-          </tr>
-          <!-- <tr *ngFor="let data of userData">
-              <td>{{ data.id }}</td>
-              <td>{{ data.name }}</td>
-              <td>{{ data.email }}</td>
-              <td>{{ data.password }}</td>
-              <td>{{ data.city }}</td>
-              <td>{{ data.state }}</td>
-              <td>{{ data.zip }}</td>
-            </tr> -->
-        </table>
+      <div class="col-md-12 pt-3" *ngIf="submitted">
+        <h5>Form Values</h5>
+        <p>
+          Name: <strong>{{ formData.name }}</strong>
+        </p>
+        <p>
+          Email: <strong>{{ formData.email }}</strong>
+        </p>
+        <p>
+          Password: <strong>{{ formData.password }}</strong>
+        </p>
+        <p>
+          City: <strong>{{ formData.city }}</strong>
+        </p>
+        <p>
+          State: <strong>{{ formData.state }}</strong>
+        </p>
+        <p>
+          Zip: <strong>{{ formData.zip }}</strong>
+        </p>
       </div>
     </div>
   </div>
