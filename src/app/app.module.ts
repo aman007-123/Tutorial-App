@@ -22,6 +22,7 @@ import { ParentComponent } from './communication/parent/parent.component';
 import { ChildComponent } from './communication/child/child.component';
 import { TdfComponent } from './forms/tdf/tdf.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { HighlightDirective } from './directives/highlight.directive';
     TdfComponent,
     ReactiveComponent,
     HighlightDirective,
+    CapitalizePipe,
   ],
   imports: [
     BrowserModule,
