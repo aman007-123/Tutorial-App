@@ -6,17 +6,15 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./child.component.css'],
 })
 export class ChildComponent implements OnInit {
-  @Input()
-  uname = '';
+  @Input() message: string = '';
 
-  @Output()
-  notify: EventEmitter<string> = new EventEmitter<string>();
-
-  passData() {
-    this.notify.emit('This value is coming form child');
-  }
+  @Output() dataEvent = new EventEmitter<string>();
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  sendData() {
+    this.dataEvent.emit('Hello Parent! 👋');
+  }
 }
