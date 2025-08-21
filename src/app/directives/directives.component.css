@@ -1,0 +1,12 @@
+.active {
+  color: rgb(62, 119, 233);
+  font-weight: bold;
+}
+.inactive {
+  color: red;
+  font-style: italic;
+}
+
+img {
+  width: 50%;
+}

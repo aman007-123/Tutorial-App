@@ -21,6 +21,7 @@ import { MiscellanousComponent } from './miscellanous/miscellanous.component';
 import { ParentComponent } from './communication/parent/parent.component';
 import { ChildComponent } from './communication/child/child.component';
 import { TdfComponent } from './forms/tdf/tdf.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { TdfComponent } from './forms/tdf/tdf.component';
     ChildComponent,
     TdfComponent,
     ReactiveComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,

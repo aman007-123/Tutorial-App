@@ -22,20 +22,18 @@
           <code>*ngIf</code>, <code>*ngFor</code>,
           <code>*ngSwitch</code>
         </p>
-          <table class="table table-bordered border-light">
-            <tr>
-              <th>Name</th>
-              <th>Description</th>
-            </tr>
-            <tr>
-              <td><code>*ngIf</code></td>
-              <td>
-                <span *ngIf="showText; else alternate">{{ text }}</span>
-                <ng-template #alternate
-                  ><span>This is false text</span></ng-template
-                >
-              </td>
-            </tr>
+        <table class="table table-bordered border-light">
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>*ngIf</code></td>
+            <td>
+              <span *ngIf="showText; else alternate">{{ text }}</span>
+              <ng-template #alternate><span>This is false text</span></ng-template>
+            </td>
+          </tr>
           <tr>
             <td><code>*ngFor</code></td>
             <td>
@@ -45,10 +43,8 @@
           <tr>
             <td><code>*ngSwitch</code></td>
             <td>
-              <span
-                >Using switchcase we can switch between different DOM based
-                elements</span
-              >
+              <span>Using switchcase we can switch between different DOM based
+                elements</span>
             </td>
           </tr>
         </table>
@@ -69,16 +65,18 @@
           <tr>
             <td><code>*ngClass</code></td>
             <td>
-              <span>It is used to add dynamically class in the DOM</span>
+              <span [ngClass]="isActive ? 'active' : 'inactive'">It is used to add dynamically class in the DOM</span>
             </td>
           </tr>
           <tr>
             <td><code>*ngStyle</code></td>
             <td>
-              <span
-                >It is used in the DOM to apply styles dynamically. It uses js
-                objects</span
-              >
+              <span [ngStyle]="{
+                  'font-size.px': fontSize,
+                  'background-color': bgColor,
+                  'color': color
+  }">It is used in the DOM to set inline CSS styles dynamically. It uses js
+                objects</span>
             </td>
           </tr>
         </table>
@@ -91,6 +89,21 @@
           command.<br>
           <code>ng generate directive 'directive-name'</code>
         </p>
+
+        Example: <p appHighlight>
+          Hover over this text to see highlight effect!
+        </p>
+
+        <div class="row">
+          <div class="col-md-12">
+            <img src="../../assets/img/directives/drectiveHtml.png" alt="">
+          </div>
+        </div><br>
+        <div class="row">
+          <div class="col-md-12">
+            <img src="../../assets/img/directives/directiveTs.png" alt="">
+          </div>
+        </div>
       </div>
     </div>
   </div>
