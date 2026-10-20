@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from './api.service';
+import { interval, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-services',
@@ -8,22 +9,22 @@ import { ApiService } from './api.service';
 })
 export class ServicesComponent implements OnInit {
   users: any = [];
+  time$: Observable<number> = interval(1000);
 
   constructor(private api: ApiService) {}
 
   ngOnInit(): void {
     this.getUsers();
-    
   }
   getUsers() {
-    this.api.getData().subscribe({ 
+    this.api.getData().subscribe({
       next: (res) => {
-      this.users = res;
-      console.table(this.users);
-    },
-  error:(err) =>{
-    alert('error on fetching data');
-  },
-  });
+        this.users = res;
+        console.table(this.users);
+      },
+      error: (err) => {
+        alert('error on fetching data');
+      },
+    });
   }
 }
